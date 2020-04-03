@@ -1,0 +1,58 @@
+# hideoka
+
+<?php require('valid.php');?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Contact</title>
+<link rel="stylesheet" type="text/css" href="contact.css">
+<link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
+<script type="text/javascript" src="contact.js"></script>
+</head>
+<body>
+    <header class="header">
+    <div>
+    <nav class="top-nav">
+    <ul>
+    <li><a href="#">HOME</a></li>
+    <li><a href="http://localhost:8888/lfc/user.php">SIGN UP</a></li> 
+    <li><a href="http://localhost:8888/lfc/login.php">LOGIN</a></li> 
+    <li><a href="http://localhost:8888/lfc/contact.php">CONTACT</a></li> 
+    </ul>
+    </nav>
+    </div>
+    </header>
+    
+<section id="main">
+<div class="main-left">
+   <h1>CONTACTS</h1> 
+</div>
+    
+<div class="main-right">
+    <h2>Contact Form</h2>
+    <div class="form-group">
+    <form method="post"> 
+    <label>Name<span class="err_msg"><?php if(!empty($err_msg['name'])) echo $err_msg['name'];?></span><br>
+    <input type="text" name="name" value=""><br>
+    </label>
+    <label>E-mail<span class="err_msg"><?php if(!empty($err_msg['email'])) echo $err_msg['email'];?></span><br>
+    <input type="text" name="email" value=""><br/>
+    </label>
+    <label>Phone<span class="err_msg"><?php if(!empty($err_msg['phone'])) echo $err_msg['phone'];?></span><br>
+    <input type="text" name="phone" value=""><br/>
+    </label>
+    <label>Comment<br>
+    <textarea class="count-text" cols="100" rows="8" name="comment" value=""　name="text"></textarea>
+    <div><span class="show-count-text">0</span>/100</div><br>
+    </label>
+    <input type="submit" value="Submit"><br>
+    </form>
+    </div>
+    </div>
+    </section>
+
+
+</body>
+</html>
